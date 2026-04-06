@@ -10,7 +10,7 @@ const Sidebar = () => {
     { name: 'Learning Center', icon: 'school', path: '/learning' },
     { name: 'My Community', icon: 'group', path: '/community' },
     { name: 'Strategy Sessions', icon: 'event_note', path: '/sessions' },
-    { name: 'My Website', icon: 'language', path: '/dashboard', active: true },
+    { name: 'My Website', icon: 'language', path: '/my-website' },
     { name: 'Settings', icon: 'settings', path: '/settings' },
   ];
 
@@ -22,7 +22,7 @@ const Sidebar = () => {
       </div>
       <nav className="flex-grow">
         {navItems.map((item) => {
-          const isActive = location.pathname === item.path || (item.name === 'My Website' && location.pathname === '/dashboard');
+          const isActive = location.pathname === item.path;
           return (
             <Link
               key={item.name}
